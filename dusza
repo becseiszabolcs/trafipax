@@ -1,0 +1,25 @@
+class tarfic():
+    
+    def __inti__(self,sor):
+        ország, rendszám, hely, típus, sebesség, idő = sor.strip().split(',')
+        
+        self.ország= országg     
+        self.rendszám= rendszám
+        self.hely= hely
+        self.típus= típus
+        self.sebesség= sebesség
+        self.idő= idő
+        
+        
+        
+with open("D22.txt",'r',encoding="UTF-8") as f:
+  fejlec=f.readline().strip()
+  lista=list()
+  for sor in f:
+      lista.append(sor.strip().split(","))
+      
+
+res=[sor for sor in lista if sor.típus=='m' and sor.hely=='A' and sor.sebesség>130]
+motor=len(res)
+        
+  
